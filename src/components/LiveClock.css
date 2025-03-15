@@ -1,0 +1,82 @@
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    padding: 20px;
+  }
+  
+  .clock-box {
+    background-color: black;
+    border: 2px solid #22c55e;
+    box-shadow: 0 0 10px #22c55e;
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    font-family: monospace;
+    color: #22c55e;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .clock-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .clock-date {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite alternate;
+  }
+  
+  .clock-time {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: pulse 1.5s infinite alternate;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .clock-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #22c55e;
+    background-color: black;
+    color: #22c55e;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .clock-button:hover {
+    box-shadow: 0 0 10px #22c55e;
+  }
+  
+  .clock-button.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  @keyframes pulse {
+    0% { text-shadow: 0 0 5px #22c55e; }
+    50% { text-shadow: 0 0 20px #22c55e; }
+    100% { text-shadow: 0 0 5px #22c55e; }
+  }
+  
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px #22c55e; }
+    50% { box-shadow: 0 0 20px #22c55e; }
+    100% { box-shadow: 0 0 5px #22c55e; }
+  }
+  
+  .animate-glow {
+    animation: glow 1.5s infinite alternate;
+  }
+  
